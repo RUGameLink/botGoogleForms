@@ -2,6 +2,7 @@ import requests
 import random
 
 def generate_answ():
+    #Строка со ссылкой на форму
     GoogleURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdDDTYzEEq7dJBrWus6JpFRh3iT-ugteni06g-hdnBSEOMbjw'
 
     urlResponse = GoogleURL+'/formResponse'
@@ -44,7 +45,7 @@ def generate_answ():
         kapli = 'Нет'
 
     monitor_list = ['Ниже уровня глаз', 'На уровне глаз', 'Выше уровня глаз', 'Под углом']
-
+    #Подготовка ответов в связки с ключами к вопросам
     form_data = {'entry.17028875': random.choice(inst_list),
                  'entry.1519727847': random.choice(rast_list),
                  'entry.2056483453': glass,
@@ -58,6 +59,7 @@ def generate_answ():
                  'entry.1726174089': random.choice(monitor_list)}
 
     print(form_data)
+    #Сборка ответа и загрузка в форму
     user_agent = {'Referer':urlReferer,'User-Agent': "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36"}
     req = requests.post(urlResponse, data=form_data, headers=user_agent)
 
