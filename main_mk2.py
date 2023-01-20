@@ -3,7 +3,7 @@ import random
 
 def generate_answ(inst):
     #Строка со ссылкой на форму
-    GoogleURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdM2ks2Q6uT9ecMjGFAkYfzlnKI-jbU3-eVSgfJ1Z_N8kwL8Q'
+    GoogleURL = 'https://docs.google.com/forms/d/e/1FAIpQLSd395Wc4ctIhKrAkNeeWmD-SzUWy0iqMLnFDiL8bvJbFIUYKQ'
 
     urlResponse = GoogleURL+'/formResponse'
     urlReferer = GoogleURL+'/viewform'
